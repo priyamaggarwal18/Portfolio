@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Roboto:wght@400;500&family=Varela+Round&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    cursor:pointer;
+    font-size: 50px;
+    scroll-behavior: smooth;
+    
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: 'Martel Sans', sans-serif;
+    color: white;
+    font-size: 6.4rem;
+    line-height: 5.3rem;
+}
+
+
+
+.download{
+    padding: 1rem;
+    background-color: transparent;
+    color: white;
+    font-weight:600;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border-width: 0.1rem;
+    border-color: #a443ff;
+    transition: all 1s;
+}
+.download:hover{
+    background-color: #a443ff;
+    color: white;
+    border-color: transparent;
+    transition: all 1s;
+    padding: 1rem;
+
+}
+
+.download svg{
+    position: relative;
+    top: 1.5px;
+}
+.under {
+    margin-top: 1.4rem;
+    background: blueviolet;
+    border: 4px solid blueviolet;
+    border-radius: 50px;
+    height: 0.5rem;
+    width: 0;  /* Set initial width to 0 */
+    animation: slideFromLeft 1.5s ease-out forwards;  /* Add animation */
+    box-sizing: unset;
+}
+
+@keyframes slideFromLeft {
+    to {
+        width: 28.5rem;  /* Set final width */
+    }
+}
+
+p{  margin-top: 1.3rem;
+    margin-bottom: 1.4rem;
+    line-height: 1.5rem;
+    font-family: 'Martel Sans', sans-serif;
+    color: white;
+    font-size: 1rem;
+    font-weight: 200;
+    width: 35rem;
+}
+
+.section-hero {
+    padding: 4rem;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    background: black;
+}
+
+.scroll{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll img{
+    padding:0rem;
+    position: absolute;
+    height: 5rem;
+    width:5rem;
+}
+.scroll img :nth-child(1){
+    z-index: 1;
+}
+
+.scroll img :nth-child(2){
+    z-index: 2;
+    transition: 0.2s;
+}
+.scroll img:nth-child(2):hover{
+    transform: rotateY(20deg) scale(1.1) rotate(360deg); 
+    transition: 10s;
+    
+
+}
+
+.hero-leftside {
+    padding: 2rem;
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hero-leftside img{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.hero-rightside {
+    flex-basis: 50%;
+    position: relative;
+    padding: 2rem;
+    margin: 2rem;
+    justify-content: flex-end;
+
+}
+
+/* Individual image styling */
+.hero-rightside img {
+    height: 40rem;
+    width: 40rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+/* Set z-index for each image */
+.hero-rightside img:nth-child(1) {
+    z-index: 1;
+    height: 42rem;
+    width: 42rem;
+    animation: moveUp 3s infinite alternate; /* Add animation for the first child */
+}
+
+.hero-rightside img:nth-child(2) {
+    z-index: 2;
+    transition: transform 0.5s ease;
+    animation: move 2s ;
+    /* animation: moveup 2s;
+    animation: movedown 2s; */
+    
+}
+
+
+.hero-rightside img:nth-child(3) {
+    z-index: 3;
+    animation: moveDown 3s infinite alternate; /* Add animation for the third child */
+}
+::selection{
+    color: rgb(139, 15, 227);
+}
+/* Define animation keyframes for moving up */
+@keyframes moveUp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Adjust the value as needed for upward movement */
+    }
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+        
+    }
+}
+
+@keyframes move2 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Adjust the value as needed for upward movement */
+    }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Adjust the value as needed for upward movement */
+    }
+}
+/* Define animation keyframes for moving down */
+@keyframes moveDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px); /* Adjust the value as needed for downward movement */
+    }
+}
+
+
+.line{
+    background: white;
+    border: 0px solid white;
+    border-radius: 50px;
+    height: 0.1rem;
+    width: 5rem;
+    margin: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.getsocial{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+}
+
+.social_txt{
+    width: 6rem;
+    font-size: 1.2rem;
+}
+.svg-icon {
+    fill: 193, 193, 193, 0.658; /* Set the default fill color */
+    transition: fill 0.3s ease; /* Add a transition for a smooth color change */
+    position: relative;
+    top: 0px;
+    margin-right: 0.5rem;
+}
+
+/* Change the fill color to blueviolet on hover */
+.svg-icon:hover path {
+    fill: blueviolet; /* Set the hover color */
+    transition: all 0.5s;
+}
+
+/*CSS FOR SKILLS SECTION */
+
+.skills {
+    margin: 5rem 3rem;
+    padding: 4rem;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    padding: 1rem;
+    width: 37rem;
+    height: 37rem;
+    background-color: #242424;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Set a 2-column grid */
+    gap: 2rem; /* Add some gap between the circles */
+}
+
+
+.circle {
+
+        margin: 1.35em;
+        border: 1px #555 solid;
+        width: 8rem;  /* Adjust the size as needed */
+        height: 8rem; /* Adjust the size as needed */
+        border-radius: 50%; /* Make it a perfect circle */
+}
+
+/* Adjust the width and height of the SVG elements within each circle */
+.circle svg {
+    width: 8rem;
+    height: 8rem;
+}
+
+/* Add margin to separate each circle */
+.circle:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.badge{
+    margin-top: 5px; 
+    margin-right: 5px;/* Adjust the margin as needed */
+    width: 160px; /* Adjust the size as needed */
+    height: 60px;
+}
+
+.skill-leftside{
+    margin:2rem;
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skill-rightside{
+    margin: 1rem;
+    text-align: center;
+    flex-basis: 40%;
+    position: relative;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
