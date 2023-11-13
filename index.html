@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <title>Priyam Aggarwal</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
             <h1>Aggarwal</h1>  
             <div class="under"></div>
             <p>Mastering the art of pixels, codes, and systems, I'm your passionate digital architect, creating mesmerizing frontends, painting with pixels, and engineering dreams with a system-savvy touch!</p>
-            <button class="download">Download CV <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 25" width="20" height="20"><path d="M13 13V18.585L14.8284 16.7574L16.2426 18.1716L12 22.4142L7.75736 18.1716L9.17157 16.7574L11 18.585V13H13ZM12 2C15.5934 2 18.5544 4.70761 18.9541 8.19395C21.2858 8.83154 23 10.9656 23 13.5C23 16.3688 20.8036 18.7246 18.0006 18.9776L18 17C18 13.6863 15.3137 11 12 11C8.7616 11 6.12243 13.5656 6.00414 16.7751L6 17L6.00039 18.9776C3.19696 18.7252 1 16.3692 1 13.5C1 10.9656 2.71424 8.83154 5.04648 8.19411C5.44561 4.70761 8.40661 2 12 2Z" fill="rgba(255, 255, 255)"></path></svg></button>
+            <button class="download" id="downloadButton">Download CV <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 25" width="20" height="20"><path d="M13 13V18.585L14.8284 16.7574L16.2426 18.1716L12 22.4142L7.75736 18.1716L9.17157 16.7574L11 18.585V13H13ZM12 2C15.5934 2 18.5544 4.70761 18.9541 8.19395C21.2858 8.83154 23 10.9656 23 13.5C23 16.3688 20.8036 18.7246 18.0006 18.9776L18 17C18 13.6863 15.3137 11 12 11C8.7616 11 6.12243 13.5656 6.00414 16.7751L6 17L6.00039 18.9776C3.19696 18.7252 1 16.3692 1 13.5C1 10.9656 2.71424 8.83154 5.04648 8.19411C5.44561 4.70761 8.40661 2 12 2Z" fill="rgba(255, 255, 255)"></path></svg></button>
             <br>
             <div class="getsocial">
                 <p class="social_txt">Get Social</p>
@@ -58,99 +59,67 @@
     </section>
 
     <!-- Section for skills -->
-    <section class="skills " id="skills">
+    <section class="skills" id="skills">
          <div class="skill-leftside">
-            <img src="images/left side skills.svg" alt="left side">
-            <!--<div class="card">
-                <div class="circle" data-prog="95">
-                    <svg width="250" height="250">
-                        <circle>
-                            r="100"
-                            cx="125"
-                            cy="125"
-                            class="track"
-                        </circle>
-                        <circle>
-                            r="100"
-                            cx="125"
-                            cy="125"
-                            class="progress"
-                        </circle>
-                    </svg>
-                    <div class="circle-inner">
-                        <h3>c/c++</h3>
-                    </div>
-                </div>
-                <div class="circle" data-prog="70">
-                    <svg width="250" height="250">
-                        <circle>
-                            r="100"
-                            cx="125"
-                            cy="125"
-                            class="track"
-                        </circle>
-                        <circle>
-                            r="100"
-                            cx="125"
-                            cy="125"
-                            class="progress"
-                        </circle>
-                    </svg>
-                    <div class="circle-inner">
-                        <h3>HTML</h3>
-                    </div>
-                </div>
-                <div class="circle" data-prog="43">
-                    <svg width="250" height="250">
-                        <circle>
-                            r="100"
-                            cx="125"
-                            cy="125"
-                            class="track"
-                        </circle>
-                        <circle>
-                            r="100"
-                            cx="125"
-                            cy="125"
-                            class="progress"
-                        </circle>
-                    </svg>
-                    <div class="circle-inner">
-                        <h3>css</h3>
-                    </div>
-                </div>
-                <div class="circle" data-prog="20">
-                    <svg width="250" height="250">
-                        <circle>
-                            r="100"
-                            cx="125"
-                            cy="125"
-                            class="track"
-                        </circle>
-                        <circle>
-                            r="100"
-                            cx="125"
-                            cy="125"
-                            class="progress"
-                        </circle>
-                    </svg>
-                    <div class="circle-inner">
-                        <h3>Js</h3>
-                    </div>
-                </div>
-            </div>
-            </div>
+            <img class="skill" src="images/left side skills.svg" alt="left side">
             
-             -->
         </div>
 
         <div class="skill-rightside">
-            <h1 style="margin-bottom: 2rem;">Skills</h1> 
-            <img src="images/right side skills.svg" alt="right_side">
-</div>
-</div>
+            <h1 class ="skill" style="margin-bottom: 2rem;">Skills</h1> 
+            <img class="skill" src="images/right side skills.svg" alt="right_side">
+        </div>
         
     </section>
+
+    <!-- Section for experience -->
+    <section class="timeline_main">
+        <h1 style="text-align: center;">Experience</h1>
+        <div class="timeline">
+            <div class="container left-container">
+                <span class="left-container-arrow"></span>
+                <img src="images/experience/osc.png" alt="osc logo">
+                <div class="text-box">
+                <h2 style="font-size: 45px;">Graphics Head</h2> 
+                <small style="font-size: 20px;">Open Source Chandigarh</small>
+                <h4>(September 2023 - Present)</h4>
+                
+                </div>
+            </div>
+
+            <div class="container right-container">
+                <img src="images/experience/hacktoberfest.svg" alt="hacktoberfest">
+                <div class="text-box">
+                <h2 style="font-size: 45px; line-height: 4rem;">Maintainer & Contributor</h2> 
+                <small style="font-size: 20px;">Hacktoberfest</small>
+                <h4>(October 2023 - November 2023)</h4>
+                <span class="right-container-arrow"></span>
+                </div>
+            </div>
+
+            <div class="container left-container">
+                <img src="images/experience/social winter of code.svg" alt="social-winter-code">
+                <div class="text-box">
+                <h2 style="font-size: 45px; line-height: 4rem;">Contributor</h2> 
+                <small style="font-size: 20px;">Social Winter of Code</small>
+                <h4>(October 2023 - Present)</h4>
+                <span class="left-container-arrow"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section for projects courosel -->
+    <section class="container-img">
+            <h1 style="text-align: center;margin-bottom: 3rem;">Projects</h1>
+            <div class="gallery">
+                <div class="img-box" onclick="window.open('https://priyamaggarwal18.github.io/U-Move2.0/', '_blank')"><h3>Umove</h3></div>
+                <div class="img-box" onclick="window.open('https://priyamaggarwal18.github.io/linktree/', '_blank')"><h3>Linktree</h3></div></a>
+                <div class="img-box" onclick="window.open('https://github.com/priyamaggarwal18/Game-Hub','_blank')"><h3>GameHub 2.0</h3></div>
+                <div class="img-box" onclick="window.open('https://github.com/priyamaggarwal18/Game_Hub1','_blank')"><h3>GameHub 1.0</h3></div>
+            </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>

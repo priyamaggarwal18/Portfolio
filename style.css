@@ -275,8 +275,18 @@ p{  margin-top: 1.3rem;
     height: 100vh;
     display: flex;
     justify-content: space-between;
+    
 }
 
+.skill{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+.skill .animated{
+    opacity:1;
+    transform: translateY(0);
+}
 .card {
     padding: 1rem;
     width: 37rem;
@@ -289,25 +299,7 @@ p{  margin-top: 1.3rem;
 }
 
 
-.circle {
 
-        margin: 1.35em;
-        border: 1px #555 solid;
-        width: 8rem;  /* Adjust the size as needed */
-        height: 8rem; /* Adjust the size as needed */
-        border-radius: 50%; /* Make it a perfect circle */
-}
-
-/* Adjust the width and height of the SVG elements within each circle */
-.circle svg {
-    width: 8rem;
-    height: 8rem;
-}
-
-/* Add margin to separate each circle */
-.circle:not(:last-child) {
-    margin-bottom: 1.5rem;
-}
 
 .badge{
     margin-top: 5px; 
@@ -336,3 +328,200 @@ p{  margin-top: 1.3rem;
 
 }
 
+
+
+/* CSS FOR EXPERIENCE SECTION */
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.5s, height 1s;
+}
+
+.timeline.animated {
+    opacity: 1;
+    height:90vh;
+}
+
+.container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    background: transparent;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.container.animated {
+    /* Your animated styles using keyframes */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-box{
+    padding: 20px 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    background: #242424;
+    font-family: 'Martel Sans', sans-serif;
+    color: white;
+}
+
+.left-container{
+    left: 0;
+    text-align: right;
+}
+
+.right-container{
+    left: 50%;
+}
+.container img{
+    position: absolute;
+    width: 60px;
+    border-radius: 50%;
+    right: -30px;
+    top: 25px;
+    z-index: 10px;
+}
+
+.right-container img{
+    left: -30px;
+}
+
+.timeline::after{
+    content: '';
+    position:absolute;
+    width: 10px;
+    height: 100%;
+    background: blueviolet;
+    border-radius: 4px;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+}
+
+@keyframes moveline{
+   0%{
+    height: 0;
+   } 
+   100%{
+    height: 100%;
+   }
+
+}
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent ;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #242424;
+    right: 40px;
+}
+
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent ;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #242424;
+    left: 40px;
+    
+    
+}
+
+.text-box small{
+    color:  blueviolet;
+    font-weight: 600;
+}
+
+/* CSS FOR PROJECTS SECTION */
+.container-img{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.gallery .animated{
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.img-box{
+    width: 150px;
+    height: 550px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 50px ;
+    background: url(images/projects/1.svg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s;
+}
+
+.img-box:nth-child(2){
+    background: url(images/projects/2.svg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box:nth-child(3){
+    background: url(images/projects/3.svg);
+    background-size: cover;
+    background-position: center;
+}
+.img-box:nth-child(4){
+    background: url(images/projects/4.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box h3{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 30px;
+    padding-left: 1rem;
+    display: none;
+
+}
+
+.img-box:hover{
+    width: 500px;
+
+}
+
+.img-box:hover h3{
+    display: block;
+    font-weight: 1000;
+}
+
+.img-box:nth-child(1):hover h3{
+    display: block;
+    color: black;
+    font-weight: 1000;
+    transition: all 1s;
+}
