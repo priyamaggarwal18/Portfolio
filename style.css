@@ -269,12 +269,12 @@ p{  margin-top: 1.3rem;
 /*CSS FOR SKILLS SECTION */
 
 .skills {
-    margin: 5rem 3rem;
+    align-items: center;
     padding: 4rem;
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
 }
 
@@ -461,6 +461,7 @@ p{  margin-top: 1.3rem;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
+    margin-bottom: 4rem;
 }
 .gallery .animated{
     opacity: 1;
@@ -524,4 +525,91 @@ p{  margin-top: 1.3rem;
     color: black;
     font-weight: 1000;
     transition: all 1s;
+}
+
+/* CSS FOR ABOUT SECTION */
+
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+    width: 100vw;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.scrollup{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.scrollup img {
+    padding: 0rem;
+    height: 6.5rem;
+    width: 6.5rem;
+    cursor: pointer;
+    position: absolute;
+    transition: transform 0.2s ease-in-out;
+}
+
+.scrollup img:nth-child(1) {
+    z-index: 1;
+}
+
+.scrollup img:nth-child(2) {
+    z-index: 2;
+    transform: translateY(0); /* Start with no transformation */
+}
+
+.scrollup:hover img:nth-child(2) {
+    transform: translateY(-10px); /* Adjust the distance as needed */
+}
+
+.paragraph{
+    display:none;
+}
+
+@media only screen and (max-width: 1220px) {
+    .section-hero{
+        display: none;
+    }
+    .scroll{
+        display: none;
+    }
+    .skills{
+        display: none;
+    }
+    .timeline_main{
+        display: none;
+    }
+    .container-img{
+        display: none;
+    }
+    .about{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+.paragraph{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        align-content: center;
+        margin: 4rem;
+    }
+    .paragraph p{
+        color: white;
+        font-family: 'Martel Sans', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 50px;
+    }
 }

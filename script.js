@@ -3,6 +3,11 @@ function scrollToSkills() {
     skillsSection.scrollIntoView({ behavior: 'smooth' });
 }
 
+function scrolltohome() {
+    var skillsSection = document.getElementById('home');
+    skillsSection.scrollIntoView({ behavior: 'smooth' });
+}
+
 if (performance.navigation.type == 1) {
     // Redirect to the landing page on refresh
     window.location.href = "index.html"; // Replace with the actual landing page URL
@@ -74,7 +79,7 @@ const handleTimelineIntersection = (entries, observer) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animated');
         } else {
-            entry.target.classList.remove('animated');
+            entry.target.classList.opacity(0);
         }
     });
 };
@@ -108,4 +113,27 @@ const observer2 = new IntersectionObserver((entries, observer) => {
 
 projectElements.forEach(element => {
     observer2.observe(element);
+});
+
+// CSS FOR About SECTION 
+const aboutElements= document.querySelectorAll('.about');
+
+const observer3 = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            aboutElements.forEach(element => {
+                element.style.opacity = 1;
+            });
+        }
+        else{
+          aboutElements.forEach(element => {
+              element.style.opacity = 0;
+          });
+
+        }
+    });
+}, { threshold: 0.5 });
+
+aboutElements.forEach(element => {
+    observer3.observe(element);
 });
