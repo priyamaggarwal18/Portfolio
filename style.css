@@ -256,7 +256,7 @@ p{  margin-top: 1.3rem;
     fill: 193, 193, 193, 0.658; /* Set the default fill color */
     transition: fill 0.3s ease; /* Add a transition for a smooth color change */
     position: relative;
-    top: 0px;
+    top: -4px;
     margin-right: 0.5rem;
 }
 
