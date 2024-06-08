@@ -13,13 +13,13 @@ if (performance.navigation.type == 1) {
     window.location.href = "index.html"; // Replace with the actual landing page URL
 }
 
-document.getElementById('downloadButton').addEventListener('click', function() {
-    var link = document.createElement('a');
-    link.href = 'download.pdf'; 
-    link.target='_/blank' // Replace with the actual path to your PDF file
-    link.download = 'downloaded_file.pdf';  // Specify the name for the downloaded file
-    link.click();
-});
+// document.getElementById('downloadButton').addEventListener('click', function() {
+//     var link = document.createElement('a');
+//     link.href = 'download.pdf'; 
+//     link.target='_/blank' // Replace with the actual path to your PDF file
+//     link.download = 'downloaded_file.pdf';  // Specify the name for the downloaded file
+//     link.click();
+// });
 
   // Add an event listener for the scroll event
   const skillsSection = document.querySelector('.skills');
