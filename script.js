@@ -137,3 +137,36 @@ const observer3 = new IntersectionObserver((entries, observer) => {
 aboutElements.forEach(element => {
     observer3.observe(element);
 });
+
+
+const toggleButton = document.getElementById('theme-toggle');
+const root = document.documentElement;
+const icon = toggleButton.querySelector('i');
+
+// Add an event listener to the toggle button
+toggleButton.addEventListener('click', function () {
+  // Check if the current mode is dark mode (black background)
+  if (root.style.getPropertyValue('--primary-color') === 'black') {
+    // Switch to light mode by swapping the colors
+    root.style.setProperty('--primary-color', 'white');
+    root.style.setProperty('--primary-text-color', 'black');
+    root.style.setProperty('--secondary-color', 'black');
+    root.style.setProperty('--secondary-text-color', 'white');
+    
+    // Change the icon to a sun (for light mode)
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+
+  } else {
+    // Switch back to dark mode by swapping the colors
+    root.style.setProperty('--primary-color', 'black');
+    root.style.setProperty('--primary-text-color', 'white');
+    root.style.setProperty('--secondary-color', 'white');
+    root.style.setProperty('--secondary-text-color', 'black');
+    
+    // Change the icon to a moon (for dark mode)
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  }
+});
+
